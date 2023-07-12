@@ -1,2 +1,2 @@
 #!/bin/bash
-pritf "%.2f" $SUM | sort 
+printf "%.2f" $NUM | sort 
