@@ -2,6 +2,6 @@
 
 # Display a list of currently running processes with process hierarchy
 
-# Use the top command to show all processes, including those without a TTY, in a user-oriented format
+# Use the ps command to show all processes, including those without a TTY, in a user-oriented format
 # The -e option selects all processes, and the -o option customizes the output format
-top
+ps -u
