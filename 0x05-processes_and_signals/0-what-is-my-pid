@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#Dsplay the PID of the current script
+echo " $$"
