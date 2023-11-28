@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#this script is displaying "best school" 10 times
+for list_t in range [best school] write 10 times
