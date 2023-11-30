@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#Bash script that pings an IP address passed as an argument
+if ip_address="$1"
+
+# Perform the ping 5 times
+ then 
+ ping -c 5 "$ip_address"
+else 
+echo "5-is_the_host_on_the_network {IP_ADDRESS}"
+fi
