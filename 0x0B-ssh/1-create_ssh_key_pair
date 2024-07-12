@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Define the name of the private key and the passphrase
+PRIVATE_KEY_NAME="school"
+PASSPHRASE="betty"
+
+# Create the RSA key pair
+ssh-keygen -t rsa -b 4096 -f "$PRIVATE_KEY_NAME" -N "$PASSPHRASE"
+
+# Check if the key pair was created successfully
+if [ $? -eq 0 ]; then
+    echo "RSA key pair created successfully: $PRIVATE_KEY_NAME (private), $PRIVATE_KEY_NAME.pub (public)"
+else
+    echo "Failed to create RSA key pair."
+fi
