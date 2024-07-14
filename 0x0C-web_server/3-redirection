@@ -1,4 +1,14 @@
 #!/usr/bin/env bash
+# Install nginx on  web-01 server
+# When querying Nginx at its root / with a GET request (requesting a page) using curl, it must return a page that contains the string Hello World!
 
-#redirect Nginx server to another page
-# The redirection is 301 Moved Permanently
+# Update package index
+sudo apt-get update
+
+# Install nginx
+sudo apt-get install -y nginx
+
+sudo ufw allow 'Nginx HTTP'
+
+sh -c 'echo "Hello World!" > /var/www/html/index.html' 
+service nginx restart
