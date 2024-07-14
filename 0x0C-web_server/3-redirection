@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+# Configures an nginx server so that /redirect_me redirects to a new page
 # redirect Nginx server to another page
 # The redirection type is 301-Moved Permanently 
 
