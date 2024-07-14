@@ -27,4 +27,3 @@ echo '<!DOCTYPE html>
 
 # Restart nginx (without using systemctl)
 sudo kill -HUP $(cat /var/run/nginx.pid)
-
