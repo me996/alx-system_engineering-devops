@@ -25,5 +25,7 @@ echo '<!DOCTYPE html>
 </body>
 </html>' | sudo tee /var/www/html/index.html > /dev/null
 
+sh -c 'echo "Hello World!" > /var/www/html/index.html' 
+
 # Restart nginx (without using systemctl)
 sudo kill -HUP $(cat /var/run/nginx.pid)
