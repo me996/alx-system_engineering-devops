@@ -14,7 +14,7 @@ sudo ufw allow 'Nginx HTTP'
 buffer="server_name _;\n\trewrite ^\/redirect_me https:\/\/twitter.com permanent;"
 sudo sed -i "s/server_name _;/$buffer/" /etc/nginx/sites-available/default
 
-buffer="server_name _;\n\a error_page 404/ 404.html;"
+buffer="server_name _;\n\a error_page 404 /404.html;"
 sudo sed -i "s/server_name _;/$buffer/" /etc/nginx/sites-available/default
  
 sh -c 'echo "Hello World!" > /var/www/html/index.html' 
