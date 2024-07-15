@@ -16,7 +16,7 @@ sudo sed -i "s/server_name _;/$buffer/" /etc/nginx/sites-available/default
 
 sudo sh -c 'echo "Ceci n'est pas une page" > /var/www/html/404.html'
 
-buffer="server_name _;\\n\\a error_page 404 /404.html;"
+buffer="server_name _;\\n\\terror_page 404 /404.html;"
 sudo sed -i "s/server_name _;/$buffer/" /etc/nginx/sites-available/default
  
 sh -c 'echo "Hello World!" > /var/www/html/index.html' 
