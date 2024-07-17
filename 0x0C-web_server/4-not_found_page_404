@@ -12,12 +12,12 @@ sudo apt-get install -y nginx
 sudo ufw allow 'Nginx HTTP'
 
 buffer="server_name _;\n\trewrite ^\/redirect_me https:\/\/twitter.com permanent;"
-sudo sed -i -f -"s/server_name _;/$buffer/" /etc/nginx/sites-available/default
+sudo sed -i "s/server_name _;/$buffer/" /etc/nginx/sites-available/default
 
 sudo sh -c 'echo "Ceci  n'\''est  pas une page" > /var/www/html/404.html'
 
 buffer_2="listen 80 default_server;\n\terror_page 404 \/404.html;\n\tlocation = \/404.html {\n\t\troot \/var\/www\/html;\n\t\tinternal;\n\t}"
-sudo sed -i -f -"s/listen 80 default_server;/$buffer_2/" /etc/nginx/sites-enabled/default
+sudo sed -i "s/listen 80 default_server;/$buffer_2/" /etc/nginx/sites-enabled/default
  
 sh -c 'echo "Hello World!" > /var/www/html/index.html' 
 sudo service nginx restart
