@@ -12,7 +12,7 @@ sudo apt-get install -y nginx
 sudo ufw allow 'Nginx HTTP'
 
 buffer="server_name _;\n\trewrite ^\/redirect_me https:\/\/twitter.com permanent;"
-sudo sed -i "s/server_name _;/$buffer/" /etc/nginx/sites-available/defaultS
+sudo sed -i "s/server_name _;/$buffer/" /etc/nginx/sites-available/default
 
 sudo sh -c 'echo "Ceci  n'\''est  pas une page" > /var/www/html/404.html'
 
